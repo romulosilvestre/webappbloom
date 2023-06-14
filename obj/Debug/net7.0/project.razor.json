@@ -18680,6 +18680,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\PROFESSOR\\Desktop\\taxobloom\\webappbloom\\Views\\Competencia\\Listar.cshtml",
+      "TargetPath": "Views\\Competencia\\Listar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\PROFESSOR\\Desktop\\taxobloom\\webappbloom\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"

@@ -22,22 +22,20 @@ public class CompetenciaController:Controller{
    }
 
    public IActionResult RelatorioCompe(){
-      
-      /*var competencia = new Competencia(){
-           ColunaBloom = "Teste Coluna",
-           LinhaBloom = "Teste Linha"
-      };
-      
-      var viewModel = new DetalhesCompViewModel(){
-            Competencia = competencia,
-            TituloPagina = "Página de Teste"
-      };*/
+     
       var competencias = _context.Competencias.ToList();
       return View();
-
-
-
-
+   }
+   public IActionResult Listar(){
+      //pega os dados do banco
+      var listaCompe = _context.Competencias.ToList();
+      
+      //envia o objeto listaCompe (dados do banco)
+      //para a ViewModel (ICollection<>   List<>)
+      var listaViewModel = new ListaCompetenciaViewModel{           
+           Competencias = listaCompe
+      };
+      return View(listaViewModel);
    }
 
 }

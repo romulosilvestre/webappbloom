@@ -1,0 +1,20 @@
+@model ListaCompetenciaViewModel
+<h1>Listando Competências</h1>
+<table>   
+     <tr>
+        <th>Id</th>
+        <th>Coluna Bloom</th>
+        <th>Linha Bloom</th>   
+     </tr>
+     @{
+       foreach(var item in Model.Competencias)
+       {
+          <tr>
+              <td>@item.Id</td>
+              <td>@item.ColunaBloom</td>
+              <td>@item.LinhaBloom</td>
+          </tr>
+
+       } 
+     }
+</table>
