@@ -1,0 +1,33 @@
+<!--Vamos tipar a View-->
+
+@model CriarCompetenciaViewModel
+
+<!-- Inicio da Div -->
+<div class="text-center">
+
+    <!-- Definindo um título H1 os dados estão vindo do ViewData[ ]-->
+    <!-- ViewData[] é uma classe que transporta dados do Controller para a View-->
+    <h1 class="display-4">@ViewData["titulo"]</h1>
+    <!--Inicio do Form-->
+    <form method="post">
+        <!--Definindo um input text - é uma entrada de dados do tipo text-->     
+        <label for="colunas" asp-for="ColunaBloom">Escolha uma Coluna Bloom:</label>
+        <input type="text" asp-for="ColunaBloom" id="ColunaBloom" name="ColunaBloom" list="opcoes-colunas">
+        <datalist id="opcoes-colunas">
+            <option value="Teste 1"></option>
+            <option value="Teste 2"> </option>
+            <option value="Teste 3"></option>
+            <option value="Teste 4"></option>
+            <option value="Teste 5"></option>
+        </datalist>
+
+
+        <label asp-for="LinhaBloom">Digite a linha Bloom</label>
+        <input asp-for="LinhaBloom" type="text">
+
+
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</div>
+

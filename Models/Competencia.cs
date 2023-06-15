@@ -6,4 +6,14 @@ public class Competencia{
     public string? ColunaBloom { get; set; }
 
     public string? LinhaBloom { get; set; }
+    
+    public Competencia(){
+        
+    }
+    public Competencia(string? colunaBloom, string? linhaBloom)
+    {        
+        ColunaBloom = colunaBloom;
+        LinhaBloom = linhaBloom;
+    }
 }
+
