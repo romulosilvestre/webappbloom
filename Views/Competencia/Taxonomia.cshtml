@@ -1,0 +1,48 @@
+@model ListaCompetenciaViewModel
+<h1>Listando Competências</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      @{
+        Dictionary<string, List<string>> competencias = new Dictionary<string, List<string>>()
+        {
+            {"MEMORIZAR", new List<string>()},
+            {"COMPREENDER", new List<string>()},
+            {"APLICAR", new List<string>()},
+            {"ANALISAR", new List<string>()},
+            {"AVALIAR", new List<string>()},
+            {"CRIAR", new List<string>()},
+        };
+
+        foreach(var item in Model.Competencias)
+        {
+            foreach(string key in competencias.Keys)
+            {
+                if(@item.ColunaBloom?.ToString().ToUpper() == key){competencias[key].Add(@item.LinhaBloom);}
+            }
+        }
+        foreach (string key in competencias.Keys){
+            <th scope="col">@key</th>
+        };
+      }
+    </tr>
+  </thead>
+  <tbody>
+    <tbody>
+        @{
+            for (int i = 0; i < competencias.Values.Count; i++)
+            {
+                <tr>
+                @foreach(string key in competencias.Keys)
+                {
+                    try{
+                        <td>@competencias[key][i]</td>
+                    }
+                    catch{}
+                }
+                </tr>
+            }
+        }
+  </tbody>
+</table>

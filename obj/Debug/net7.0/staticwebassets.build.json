@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WpzCmqfkG+39w5IhN/+Zs9mrEy7M0/MmvrVFzNc5bKc=",
+  "Hash": "rMee7eL3LIxGX65N7cFGcgSkQsHuYoxGrkXLBxifpXY=",
   "Source": "webappbloom",
   "BasePath": "_content/webappbloom",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\PROFESSOR\\Desktop\\taxobloom\\webappbloom\\wwwroot\\imagens\\taxonomia.webp",
+      "SourceId": "webappbloom",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PROFESSOR\\Desktop\\taxobloom\\webappbloom\\wwwroot\\",
+      "BasePath": "_content/webappbloom",
+      "RelativePath": "imagens/taxonomia.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\taxonomia.webp"
     },
     {
       "Identity": "C:\\Users\\PROFESSOR\\Desktop\\taxobloom\\webappbloom\\wwwroot\\js\\site.js",

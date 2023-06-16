@@ -4,7 +4,8 @@
      <tr>
         <th>Id</th>
         <th>Coluna Bloom</th>
-        <th>Linha Bloom</th>   
+        <th>Linha Bloom</th> 
+        <th>Apagar</th>  
      </tr>
      @{
        foreach(var item in Model.Competencias)
@@ -13,6 +14,7 @@
               <td>@item.Id</td>
               <td>@item.ColunaBloom</td>
               <td>@item.LinhaBloom</td>
+              <td><a href="/Competencia/Deletar/@item.Id">Deletar</a></td>
           </tr>
 
        } 

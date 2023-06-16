@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\PROFESSOR\\Desktop\\taxobloom\\webappbloom\\wwwroot\\imagens\\taxonomia.webp",
+      "PackagePath": "staticwebassets\\imagens\\taxonomia.webp"
+    },
+    {
       "Id": "C:\\Users\\PROFESSOR\\Desktop\\taxobloom\\webappbloom\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -43,7 +43,21 @@ public class CompetenciaController : Controller
         };
         return View(listaViewModel);
     }
-    
+    public IActionResult Taxonomia(){
+         //pega os dados do banco
+        var listaCompe = _context.Competencias.ToList();
+
+        //envia o objeto listaCompe (dados do banco)
+        //para a ViewModel (ICollection<>   List<>)
+        var listaViewModel = new ListaCompetenciaViewModel
+        {
+            Competencias = listaCompe
+        };
+        return View(listaViewModel);
+        return View();
+    }
+
+
     public IActionResult Criar()
     {
         ViewData["Titulo"] = "Cadastrar Taxonomia de Bloom";
@@ -52,12 +66,28 @@ public class CompetenciaController : Controller
     [HttpPost]
     public IActionResult Criar(CriarCompetenciaViewModel dados)
     {
-         var competencia = new Competencia(dados.ColunaBloom, dados.LinhaBloom);
+        var competencia = new Competencia(dados.ColunaBloom, dados.LinhaBloom);
         _context.Add(competencia);
         _context.SaveChanges();
         //Quero redirecionar para a página Listar.cshtml
         return RedirectToAction(nameof(Listar));
 
     }
+    
+    public IActionResult Deletar(int id)
+    {
+
+        var competencia = _context.Competencias.Find(id);
+        if (competencia is null)
+        {
+            return NotFound();
+        }
+
+        _context.Remove(competencia);
+        _context.SaveChanges();
+        return RedirectToAction(nameof(Listar));
+
+    }
+
 
 }
